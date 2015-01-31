@@ -20,6 +20,8 @@ package com.brferraz.events
 		static public const UPDATE			:String = "onUpdate";
 		static public const DESTROY			:String = "onDestroy";
 		
+		static public const MANAGER_CHANGE_SCREEN	:String = "onManagerChangeSCreen";
+		
 		public var data:Object;
 		public function ScreenEvent(type:String, bubbles:Boolean=false, cancelable:Boolean=false) 
 		{ 

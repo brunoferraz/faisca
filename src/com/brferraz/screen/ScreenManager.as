@@ -64,7 +64,6 @@ package com.brferraz.screen
 		{
 			lastIndex = currentIndex;
 			nextIndex = i;
-			trace(nextIndex)
 			if (nextIndex >= 0 && nextIndex < list.length) {
 				if (current != null) {//if has current
 					if (current.parent != null) {//if current is on a displayList
@@ -79,7 +78,7 @@ package com.brferraz.screen
 					current.init();
 					current.show();
 				}
-			// If change to screen out of range so Loop
+			// If index to change is out of range so Loop
 			}else if (nextIndex < 0 && list.length!=0) {
 				nextIndex = list.length -1;
 				changeTo(nextIndex);
@@ -93,6 +92,9 @@ package com.brferraz.screen
 		{
 			current.removeEventListener(ScreenEvent.HIDE_COMPLETE, removeCurrentFinishChange)
 			current.parent.removeChild(current);
+			
+			dispatchEvent(new ScreenEvent(ScreenEvent.MANAGER_CHANGE_SCREEN));
+			
 			currentIndex = nextIndex;
 			current = list[currentIndex];
 			addChild(current);
@@ -116,7 +118,5 @@ package com.brferraz.screen
 		{
 			current.update();
 		}
-		
 	}
-
 }
