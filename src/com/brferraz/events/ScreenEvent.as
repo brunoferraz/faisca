@@ -10,9 +10,15 @@ package com.brferraz.events
 	{
 		static public const SHOW			:String = "onShow";
 		static public const SHOW_COMPLETE	:String = "onShowComplete";
+		
 		static public const HIDE			:String = "onHide";
-		static public const HIDE_COMPLETE	:String = "onHideComplete"
-		static public const DESTROY		:String = "onDestroy";
+		static public const HIDE_COMPLETE	:String = "onHideComplete";
+		
+		static public const START			:String = "onStart";
+		static public const STOP			:String = "onStop";
+		
+		static public const UPDATE			:String = "onUpdate";
+		static public const DESTROY			:String = "onDestroy";
 		
 		public var data:Object;
 		public function ScreenEvent(type:String, bubbles:Boolean=false, cancelable:Boolean=false) 

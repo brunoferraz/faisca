@@ -7,17 +7,17 @@ package com.brferraz.screen
 	 */
 	public interface IScreen 
 	{
-		public function show():void;
-		public function showComplete():void;
+		function show():void;
+		function showComplete():void;
 		
-		public function hide():void;
-		public function hideComplete():void;
+		function hide():void;
+		function hideComplete():void;
 		
-		public function startScreen():void;
-		public function stopScreen():void;
+		function init():void;
+		function finish():void;
 		
-		public function update():void;
+		function update():void;
 		
-		public function destroy():void;
+		function destroy():void;
 	}
 }
